@@ -123,7 +123,7 @@ button {
   display: flex;
   padding: 24px 0;
   position: relative;
-  transition: var(--transition-duration-and-func);
+  transition: color var(--transition-duration-and-func);
 }
 
 .header-nav-link:hover,
@@ -141,16 +141,14 @@ button {
   bottom: 0;
   left: 0;
   opacity: 1;
-  transition: var(--transition-duration-and-func);
+  transition: color var(--transition-duration-and-func);
 }
 
 .header-nav-link.current {
   color: var(--accent-color);
 }
 
-.header-nav-link.current::after,
-.header-nav-link:hover::after,
-.header-nav-link:focus::after {
+.header-nav-link.current::after {
   background-color: var(--accent-color);
 }
 
@@ -166,7 +164,7 @@ button {
   color: var(--main-text-color);
   display: flex;
   gap: 40px;
-  transition: var(--transition-duration-and-func);
+  transition: color var(--transition-duration-and-func);
 }
 
 .header-contact-link:hover,
@@ -218,7 +216,7 @@ button {
   align-items: center;
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: var(--transition-duration-and-func);
+  transition: background-color var(--transition-duration-and-func);
 }
 
 .main-btn:hover,
@@ -378,7 +376,7 @@ button {
   height: 100%;
   border-radius: 50%;
   background-color: var(--accent-background-color);
-  transition: var(--transition-duration-and-func);
+  transition: background-color var(--transition-duration-and-func);
 }
 
 .our-team-social-list-link:hover,
@@ -423,31 +421,21 @@ button {
   align-items: center;
   width: 168px;
   height: 88px;
-  color: #afb1b8;
-  border: 1px solid var(--light-slate-color);
   border-radius: 4px;
+  color: var(--light-slate-color);
+  border: 1px solid var(--light-slate-color);
   transition: color var(--transition-duration-and-func),
     border var(--transition-duration-and-func);
 }
 
-.customers-link {
-  fill: var(--light-slate-color);
+.customers-icon {
+  fill: currentColor;
 }
 
 .customers-link:hover,
 .customers-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
-}
-
-.customers-icon {
-  fill: var(--light-slate-color);
-  transition: var(--transition-duration-and-func);
-}
-
-.customers-icon:hover,
-.customers-icon:focus {
-  fill: var(--accent-color);
 }
 
 /* ========== FOOTER ========== */
@@ -508,7 +496,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--transition-duration-and-func);
+  transition: background-color var(--transition-duration-and-func);
 }
 
 .footer-social-media-link:hover,
@@ -547,7 +535,10 @@ button {
   border: none;
   padding: 12px 24px;
   border: 1px solid var(--border-color);
-  transition: var(--transition-duration-and-func);
+  transition: color var(--transition-duration-and-func),
+    background-color var(--transition-duration-and-func),
+    border var(--transition-duration-and-func),
+    box-shadow var(--transition-duration-and-func);
 }
 
 .portfolio-btn:hover,
@@ -572,7 +563,7 @@ button {
 
 .portfolio-link {
   display: block;
-  transition: var(--transition-duration-and-func);
+  transition: box-shadow var(--transition-duration-and-func);
 }
 
 .portfolio-link:hover,
@@ -601,7 +592,6 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   padding-top: 40px;
   padding-right: 32px;
   padding-left: 32px;
@@ -611,7 +601,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   transform: translate(0, 100%);
-  transition: var(--transition-duration-and-func);
+  transition: transform var(--transition-duration-and-func);
 }
 
 .portfolio-subtitle {
@@ -655,7 +645,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   width: 408px;
   height: 576px;
   background-color: var(--modal-color);
